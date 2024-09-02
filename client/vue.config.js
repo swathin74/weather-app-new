@@ -4,7 +4,7 @@ module.exports = defineConfig({
   devServer: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3000'
+        target: 'https://weather-app-new-nu-eight.vercel.app/'
       }
     }
   }
