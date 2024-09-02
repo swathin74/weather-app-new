@@ -17,8 +17,8 @@
       <button type="submit" class="submit-button" @click="getLocation">Get Weather Details</button>
     </form>
   
-    <p v-if="showContent">Displaying weather information of: <strong>{{ inputLocation }}</strong>. Enter a city name and click on <strong>Get Weather Details</strong> to get data of any other location</p>
-    <p v-if="errorMessage && !showContent">{{ errorMessage }} Enter a city name and click on <strong>Get Weather Details</strong> to get data of any other location</p>
+    <p v-if="showContent && !errorMessage">Displaying weather information of: <strong>{{ inputLocation }}</strong>. Enter a city name and click on <strong>Get Weather Details</strong> to get data of any other location</p>
+    <p v-if="errorMessage">{{ errorMessage }} Enter a city name and click on <strong>Get Weather Details</strong> to get data of any other location</p>
     
     <!-- Displaying the weather information -->
     <div class="wrapper">
