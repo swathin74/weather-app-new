@@ -4,7 +4,7 @@ const axios = require('axios');
 
 //  GET request to fetch weather data by city name
 router.get('/', async (req, res) => {
-    const API_KEY = process.env.API_KEY;
+    const API_KEY = "CB2GB98PFZ9HB2GDZRUER5LDB";
     const location = req.query.city;
     const url =  `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=${API_KEY}`;
     console.log(location)
@@ -34,7 +34,7 @@ router.get('/', async (req, res) => {
 
 // GET request to fetch weather data by latitude and longitude
 router.get('/by-location', async (req, res) => {
-    const API_KEY = process.env.API_KEY;
+    const API_KEY = "CB2GB98PFZ9HB2GDZRUER5LDB";
     const { lat, lon } = req.query;
 
     if (!lat || !lon || isNaN(lat) || isNaN(lon)) {
