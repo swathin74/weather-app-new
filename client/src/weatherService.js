@@ -3,7 +3,7 @@ import axios from 'axios'
 class WeatherService {
     // Fetch weather data by city name
     async getWeather(cityName) {
-        const url = `/api/weather?city=${cityName}`;
+        const url = `https://weather-app-new-nu-eight.vercel.app/api/weather?city=${cityName}`;
         try {
             const { data } = await axios.get(url)
             return data
@@ -15,7 +15,7 @@ class WeatherService {
 
     // Fetch weather data by latitude and longitude
     async getWeatherByCoordinates(lat, lon) {
-        const url = `/api/weather/by-location?lat=${lat}&lon=${lon}`;
+        const url = `https://weather-app-new-nu-eight.vercel.app/api/weather/by-location?lat=${lat}&lon=${lon}`;
         try {
             const { data } = await axios.get(url);
             return {
